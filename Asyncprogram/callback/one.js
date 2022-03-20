@@ -5,21 +5,21 @@ let employees = [{id :101, name :"Nareshreddy",salary : 80000},
 let createEmployee = (emp,callback) =>{
     setTimeout(() => {
         employees.push(emp);
-        callback()
+        
 
-    },3000);
+    },1000);
     
 };
 let getEmployee = () => {
     setTimeout(()=> {
         let rows = "";
         employees.forEach((employee) => {
-            rows = rows + <tr>
+            rows = rows +` <tr>
        
                          <td>${employee.id}</td> 
                          <td>${employee.name}</td>
                          <td>${employee.salary}</td>
-                          </tr> ;
+                          </tr> `;
         });
         document.getElementById('tbody-data').innerHTML = rows
      },1000);
